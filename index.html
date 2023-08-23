@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+    <title>Calculadora</title>
+</head>
+<body>
+    <div id="Calculadora">
+        <input type="text" id="display" readonly> <!--Tag input de leitura-->
+        <br>
+        <table> <!--Criando uma tabela-->
+            <tr> <!--Criando uma linha-->
+                <td><input type="button" value="/" onclick="addToDisplay('/')"></td> <!--Criando uma coluna; Criando um botão; adicionando uma função ao clicar-->
+                <td><input type="button" value="*" onclick="addToDisplay('*')"></td><!--O "input" entrega o valor[Dentro do "()"] a função que exibe no "display"-->
+                <td><input type="button" value="-" onclick="addToDisplay('-')"></td>
+                <td><input type="button" value="←" onclick="backspace()"></td>      
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="addToDisplay('7')"></td>
+                <td><input type="button" value="8" onclick="addToDisplay('8')"></td>
+                <td><input type="button" value="9" onclick="addToDisplay('9')"></td>
+                <td rowspan="3"><input type="button" value="+" onclick="addToDisplay('+')" style="height: 310px;"></td> <!--Utilizando o "rowspan" alteramos a configuração do item para ocupar 3 linhas e definmos o a altura do item-->
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="addToDisplay('4')"></td>
+                <td><input type="button" value="5" onclick="addToDisplay('5')"></td>
+                <td><input type="button" value="6" onclick="addToDisplay('6')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="addToDisplay('1')"></td>
+                <td><input type="button" value="2" onclick="addToDisplay('2')"></td>
+                <td><input type="button" value="3" onclick="addToDisplay('3')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="C" onclick="clearDisplay()"></td>
+                <td><input type="button" value="0" onclick="addToDisplay('0')"></td>
+                <td colspan="2"><input type="button" class="equals-button" value="=" onclick="calculate()" style="width: 205px;"></td> <!--Utilizando o "colspan alteramos o comportamento do item na coluna, ocupando 2 colunas e alterando o width para caber nas colunas"-->
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
